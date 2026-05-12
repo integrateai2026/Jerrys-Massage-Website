@@ -1,26 +1,107 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: oklch(0.962 0.012 80);
+  --bg-2: oklch(0.935 0.018 78);
+  --bg-3: oklch(0.895 0.022 76);
+  --ink: oklch(0.22 0.015 60);
+  --ink-2: oklch(0.36 0.018 60);
+  --ink-3: oklch(0.52 0.02 65);
+  --line: oklch(0.86 0.02 70);
+  --accent: oklch(0.42 0.055 145);
+  --accent-ink: oklch(0.96 0.012 80);
+  --accent-2: oklch(0.58 0.115 50);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-dm-sans), "DM Sans", ui-sans-serif, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-instrument-serif), "Instrument Serif", serif;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* Marquee */
+.strip-track {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  animation: marquee 38s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Service card gradients */
+.svc-t-1  { background: linear-gradient(135deg, oklch(0.55 0.06 80),  oklch(0.40 0.06 75)); }
+.svc-t-2  { background: linear-gradient(135deg, oklch(0.36 0.06 30),  oklch(0.26 0.04 30)); }
+.svc-t-3  { background: linear-gradient(135deg, oklch(0.50 0.09 150), oklch(0.36 0.06 150)); }
+.svc-t-4  { background: linear-gradient(135deg, oklch(0.62 0.06 25),  oklch(0.46 0.05 30)); }
+.svc-t-5  { background: linear-gradient(135deg, oklch(0.50 0.11 50),  oklch(0.36 0.07 45)); }
+.svc-t-6  { background: linear-gradient(135deg, oklch(0.44 0.04 240), oklch(0.32 0.04 240)); }
+.svc-t-7  { background: linear-gradient(135deg, oklch(0.58 0.05 290), oklch(0.42 0.05 290)); }
+.svc-t-8  { background: linear-gradient(135deg, oklch(0.50 0.04 100), oklch(0.36 0.04 110)); }
+.svc-t-9  { background: linear-gradient(135deg, oklch(0.62 0.09 70),  oklch(0.46 0.07 65)); }
+.svc-t-10 { background: linear-gradient(135deg, oklch(0.62 0.075 90), oklch(0.46 0.06 95)); }
+.svc-t-11 { background: linear-gradient(135deg, oklch(0.42 0.02 250), oklch(0.30 0.018 250)); }
+.svc-t-12 { background: linear-gradient(135deg, oklch(0.52 0.03 60),  oklch(0.36 0.03 60)); }
+
+/* Map decorative background */
+.map-bg {
+  background-image:
+    repeating-linear-gradient(0deg, var(--bg-3) 0 1px, transparent 1px 80px),
+    repeating-linear-gradient(90deg, var(--bg-3) 0 1px, transparent 1px 80px),
+    repeating-linear-gradient(-22deg, color-mix(in oklab, var(--accent-2) 14%, transparent) 0 18px, transparent 18px 90px),
+    linear-gradient(180deg, var(--bg-2), var(--bg-3));
 }
