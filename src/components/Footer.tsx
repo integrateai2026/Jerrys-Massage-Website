@@ -53,6 +53,7 @@ export default function Footer() {
     >
       <div className="mx-auto px-8" style={{ maxWidth: 1280 }}>
         <div
+          className="footer-top-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "1.4fr 1fr 1fr 1fr",

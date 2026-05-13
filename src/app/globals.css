@@ -147,6 +147,107 @@
 .float-cta { display: inline-flex; align-items: center; gap: 10px; }
 @media (min-width: 640px) { .float-cta { display: none; } }
 
+/* ── Mobile overrides (≤640px) ───────────────────────────────────────────── */
+@media (max-width: 640px) {
+
+  /* --- Universal section padding & container padding --- */
+  main section,
+  main header {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+  .mx-auto.px-8 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* --- Hero --- */
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .hero-right-col { gap: 14px !important; }
+  .quick-book-card { padding: 20px 20px 18px !important; }
+  .hero-art-wrap { aspect-ratio: 3/2 !important; border-radius: 160px 160px 16px 16px !important; }
+  .hero-tag { font-size: 11px !important; padding: 8px 12px !important; }
+
+  /* --- About --- */
+  #why .about-portrait { max-width: 100% !important; }
+  #why .cred-card { padding: 14px 16px !important; }
+  #why .about-text-inner > .grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .about-badge {
+    width: 130px !important;
+    height: 130px !important;
+    right: -8px !important;
+  }
+  .about-badge .big { font-size: 42px !important; }
+
+  /* --- Services --- */
+  .svc-grid { grid-template-columns: 1fr !important; }
+  .svc-grid .svc-img { aspect-ratio: 16/9 !important; }
+  .services-head { flex-direction: column !important; align-items: flex-start !important; }
+  .pricing-grid { grid-template-columns: 1fr !important; }
+
+  /* --- How it works --- */
+  .steps-grid { grid-template-columns: 1fr !important; }
+  .how-head { flex-direction: column !important; }
+
+  /* --- Testimonials --- */
+  .quotes-grid { grid-template-columns: 1fr !important; }
+  .reviews-head { flex-direction: column !important; }
+
+  /* --- FAQ --- */
+  .faq-wrap {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .faq-item summary { font-size: 18px !important; padding: 20px 0 !important; }
+  .faq-item .body { padding-right: 20px !important; }
+
+  /* --- Specials --- */
+  .specials-grid { grid-template-columns: 1fr !important; }
+  .specials-head { margin-bottom: 36px !important; }
+
+  /* --- Gift card --- */
+  .gift-card {
+    padding: 36px 24px !important;
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    border-radius: 18px !important;
+  }
+
+  /* --- Contact --- */
+  .contact-head { flex-direction: column !important; align-items: flex-start !important; }
+  .contact-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .contact-card { padding: 24px 20px !important; }
+  .ci .label { flex: 0 0 90px !important; font-size: 10px !important; }
+  .ci .val { font-size: 17px !important; }
+
+  /* --- Footer --- */
+  .footer-top-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+  footer .brand h2 { font-size: 40px !important; }
+  footer { padding: 56px 0 28px !important; }
+
+  /* --- Section heads with flex --- */
+  .section-head {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    margin-bottom: 36px !important;
+  }
+
+  /* --- Why Jerry vals --- */
+  .vals-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* --- General typography tightening --- */
+  h2 { font-size: clamp(32px, 9vw, 52px) !important; }
+  h3 { font-size: clamp(20px, 5.5vw, 26px) !important; }
+}
+
 /* ── Navbar responsive ───────────────────────────────────────────────────── */
 .nav-desktop-links { display: flex; align-items: center; gap: 4px; }
 .nav-burger-btn    { display: flex; }
