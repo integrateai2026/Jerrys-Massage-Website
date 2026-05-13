@@ -54,7 +54,7 @@ export default function FloatingCTA() {
         textDecoration: "none",
       }}
     >
-      ✆ Tap to book
+      ✆ Call us
     </a>
   );
 }
