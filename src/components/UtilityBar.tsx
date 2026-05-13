@@ -31,7 +31,7 @@ export default function UtilityBar() {
             Now booking · Mon–Sat
           </span>
         </div>
-        <div className="flex items-center gap-4 flex-wrap">
+        <div className="flex items-center gap-4">
           <a
             href="tel:7019690150"
             className="hover:text-white transition-colors"
@@ -39,10 +39,10 @@ export default function UtilityBar() {
           >
             Schedule: <strong>701-969-0150</strong>
           </a>
-          <span style={{ opacity: 0.4 }}>•</span>
+          <span className="utility-bar-extra" style={{ opacity: 0.4 }}>•</span>
           <a
             href="tel:7013712225"
-            className="hover:text-white transition-colors"
+            className="utility-bar-extra hover:text-white transition-colors"
             style={{ color: "var(--bg)" }}
           >
             Jerry: <strong>701-371-2225</strong>

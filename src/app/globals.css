@@ -147,6 +147,11 @@
 .float-cta { display: inline-flex; align-items: center; gap: 10px; }
 @media (min-width: 640px) { .float-cta { display: none; } }
 
+/* ── Utility bar ─────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .utility-bar-extra { display: none !important; }
+}
+
 /* ── Mobile overrides (≤640px) ───────────────────────────────────────────── */
 @media (max-width: 640px) {
 
