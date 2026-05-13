@@ -171,13 +171,12 @@ export default function Hero() {
                 letterSpacing: "-0.01em",
               }}
             >
-              Real relief.
+              25 years of helping
               <br />
+              Fargo{" "}
               <em style={{ fontStyle: "italic", color: "var(--accent)" }}>
-                Real hands.
+                feel better.
               </em>
-              <br />
-              25&nbsp;years strong.
             </h1>
 
             <p
@@ -204,6 +203,12 @@ export default function Hero() {
                 className="hero-cta btn btn-ghost"
               >
                 ✆ Text or call Mikky · 701-969-0150
+              </a>
+              <a
+                href="#services"
+                className="btn btn-ghost"
+              >
+                View services <span className="arr">→</span>
               </a>
             </div>
 

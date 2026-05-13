@@ -69,19 +69,20 @@ export default function Navbar() {
 
   const navLinks = [
     { href: "#services", label: "Services" },
-    { href: "#why", label: "Why Jerry" },
+    { href: "#why", label: "About Jerry" },
+    { href: "#reviews", label: "Reviews" },
+    { href: "#gift", label: "Specials" },
     { href: "#faq", label: "FAQ" },
-    { href: "https://www.massagebyjerry.com/blog", label: "Health Ideas" },
     { href: "#contact", label: "Contact" },
   ];
 
   const allLinks = [
     { href: "#services", label: "Services" },
     { href: "#how", label: "How it works" },
-    { href: "#why", label: "Why Jerry" },
+    { href: "#why", label: "About Jerry" },
     { href: "#reviews", label: "Reviews" },
+    { href: "#gift", label: "Specials" },
     { href: "#faq", label: "FAQ" },
-    { href: "https://www.massagebyjerry.com/blog", label: "Health Ideas" },
     { href: "#contact", label: "Contact" },
   ];
 

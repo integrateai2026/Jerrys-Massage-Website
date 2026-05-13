@@ -1,4 +1,3 @@
-import UtilityBar from "@/components/UtilityBar";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
@@ -17,7 +16,6 @@ export default function Home() {
   return (
     <>
       <GSAPInit />
-      <UtilityBar />
       <Navbar />
       <main>
         <Hero />
