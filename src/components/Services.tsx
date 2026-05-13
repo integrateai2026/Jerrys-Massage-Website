@@ -24,8 +24,8 @@ const services = [
     tag: "Chronic pain · Knots",
     glyph: "D",
     t: 2,
-    img: "https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=900&q=80",
-    imgAlt: "Deep tissue massage releasing tension in the upper back and shoulders",
+    img: "/images/deep-tissue.jpg",
+    imgAlt: "Deep tissue and trigger point massage",
   },
   {
     num: "03",
