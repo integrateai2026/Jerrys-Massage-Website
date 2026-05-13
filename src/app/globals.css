@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* ── Design tokens ───────────────────────────────────────────────────────── */
 :root {
   --bg: oklch(0.962 0.012 80);
   --bg-2: oklch(0.935 0.018 78);
@@ -13,108 +14,96 @@
   --accent-2: oklch(0.58 0.115 50);
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* ── Base reset (must be in @layer base so component/utility layers win) ─── */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-dm-sans), "DM Sans", ui-sans-serif, sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-instrument-serif), "Instrument Serif", serif;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+
+  p  { margin: 0; }
+
+  /* color:inherit here — @layer components button styles will correctly win */
+  a  { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  ::selection { background: var(--accent); color: var(--accent-ink); }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: var(--bg);
-  color: var(--ink);
+/* ── Button system (unlayered — beats unlayered `a { color: inherit }` by
+      class specificity, and is unaffected by Tailwind's layer ordering) ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  white-space: nowrap;
   font-family: var(--font-dm-sans), "DM Sans", ui-sans-serif, sans-serif;
-  font-size: 17px;
-  line-height: 1.55;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  text-decoration: none;
+  line-height: 1;
 }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-instrument-serif), "Instrument Serif", serif;
-  font-weight: 400;
-  margin: 0;
-  line-height: 1.05;
-  letter-spacing: -0.01em;
-}
-
-p { margin: 0; }
-a { color: inherit; text-decoration: none; }
-img { display: block; max-width: 100%; }
-
-::selection {
+.btn-primary {
   background: var(--accent);
   color: var(--accent-ink);
+  border-color: var(--accent);
+}
+.btn-primary:hover {
+  background: oklch(0.36 0.055 145);
+  border-color: oklch(0.36 0.055 145);
+  transform: translateY(-1px);
 }
 
-/* ── Button system ───────────────────────────────────────────────────────── */
-@layer components {
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 26px;
-    border-radius: 999px;
-    font-weight: 500;
-    font-size: 15px;
-    letter-spacing: 0.01em;
-    border: 1px solid transparent;
-    cursor: pointer;
-    transition: all 0.18s ease;
-    white-space: nowrap;
-    font-family: var(--font-dm-sans), "DM Sans", ui-sans-serif, sans-serif;
-    text-decoration: none;
-    line-height: 1;
-  }
-
-  .btn-primary {
-    background: var(--accent);
-    color: var(--accent-ink);
-    border-color: var(--accent);
-  }
-  .btn-primary:hover {
-    background: oklch(0.36 0.055 145);
-    border-color: oklch(0.36 0.055 145);
-    transform: translateY(-1px);
-  }
-
-  .btn-ghost {
-    background: transparent;
-    color: var(--ink);
-    border-color: var(--line);
-  }
-  .btn-ghost:hover {
-    background: var(--bg-2);
-    border-color: var(--ink-3);
-  }
-
-  .btn-dark {
-    background: var(--ink);
-    color: var(--bg);
-    border-color: var(--ink);
-  }
-  .btn-dark:hover {
-    background: oklch(0.3 0.015 60);
-    border-color: oklch(0.3 0.015 60);
-  }
-
-  .arr {
-    display: inline-block;
-    transition: transform 0.18s ease;
-  }
-  .btn:hover .arr {
-    transform: translateX(3px);
-  }
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
 }
+.btn-ghost:hover {
+  background: var(--bg-2);
+  border-color: var(--ink-3);
+}
+
+.btn-dark {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+.btn-dark:hover {
+  background: oklch(0.3 0.015 60);
+  border-color: oklch(0.3 0.015 60);
+}
+
+.arr {
+  display: inline-block;
+  transition: transform 0.18s ease;
+}
+.btn:hover .arr { transform: translateX(3px); }
 
 /* ── Marquee ─────────────────────────────────────────────────────────────── */
 .strip-track {

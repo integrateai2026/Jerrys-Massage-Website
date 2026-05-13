@@ -84,6 +84,19 @@ export default function Hero() {
         0.5
       );
 
+      // Quick book card
+      tl.from(
+        ".quick-book-card",
+        {
+          opacity: 0,
+          y: -24,
+          scale: 0.97,
+          duration: 0.7,
+          ease: "power3.out",
+        },
+        0.6
+      );
+
       // Tag floats in
       tl.from(
         ".hero-tag",
@@ -238,8 +251,105 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right column - image */}
-          <div className="hero-art-wrap relative" style={{ aspectRatio: "4/5", borderRadius: "280px 280px 24px 24px", overflow: "hidden", background: "var(--bg-3)", width: "100%" }}>
+          {/* Right column — quick book card + arch image */}
+          <div className="hero-right-col" style={{ display: "flex", flexDirection: "column", gap: 20, width: "100%" }}>
+
+            {/* Quick Book card */}
+            <div
+              className="quick-book-card"
+              style={{
+                background: "var(--bg-2)",
+                border: "1px solid var(--line)",
+                borderRadius: 22,
+                padding: "28px 28px 24px",
+              }}
+            >
+              {/* Eyebrow */}
+              <span style={{
+                fontFamily: "ui-monospace, 'SF Mono', Menlo, monospace",
+                fontSize: 11,
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                color: "var(--ink-3)",
+                display: "block",
+                marginBottom: 14,
+              }}>
+                Quick Book
+              </span>
+
+              {/* Heading */}
+              <h3 style={{
+                fontFamily: "var(--font-instrument-serif)",
+                fontSize: "clamp(22px, 2.4vw, 30px)",
+                fontWeight: 400,
+                lineHeight: 1.1,
+                marginBottom: 22,
+                color: "var(--ink)",
+              }}>
+                Same-week openings
+              </h3>
+
+              {/* Pricing rows */}
+              {[
+                { label: "30 minute focus session", price: "$45" },
+                { label: "60 minute most-booked",   price: "$80" },
+                { label: "90 minute extended",       price: "$110" },
+              ].map((row, i) => (
+                <div key={i} style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  padding: "14px 0",
+                  borderTop: "1px solid var(--line)",
+                }}>
+                  <span style={{ fontSize: 15, color: "var(--ink-2)" }}>
+                    {row.label}
+                  </span>
+                  <span style={{
+                    fontFamily: "var(--font-instrument-serif)",
+                    fontSize: 20,
+                    color: "var(--accent-2)",
+                    fontWeight: 400,
+                  }}>
+                    {row.price}
+                  </span>
+                </div>
+              ))}
+
+              {/* CTA */}
+              <a
+                href="https://www.massagebyjerry.com/bookonline"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "100%",
+                  marginTop: 20,
+                  padding: "16px 24px",
+                  borderRadius: 999,
+                  background: "var(--ink)",
+                  color: "var(--bg)",
+                  fontSize: 15,
+                  fontWeight: 500,
+                  letterSpacing: "0.01em",
+                  textDecoration: "none",
+                  transition: "background 0.18s ease, transform 0.1s ease",
+                }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLElement).style.background = "oklch(0.30 0.015 60)";
+                  (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)";
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLElement).style.background = "var(--ink)";
+                  (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
+                }}
+              >
+                Book online
+              </a>
+            </div>
+
+          {/* Arch image */}
+          <div className="hero-art-wrap relative" style={{ aspectRatio: "4/3", borderRadius: "280px 280px 24px 24px", overflow: "hidden", background: "var(--bg-3)", width: "100%" }}>
             <div
               className="hero-art-inner absolute inset-0 scale-110"
               style={{ transformOrigin: "center center" }}
@@ -291,6 +401,9 @@ export default function Hero() {
               </span>
             </div>
           </div>
+          {/* end hero-art-wrap */}
+          </div>
+          {/* end hero-right-col */}
         </div>
       </div>
 
