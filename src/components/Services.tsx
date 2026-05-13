@@ -34,8 +34,8 @@ const services = [
     tag: "Recovery · Performance",
     glyph: "Sp",
     t: 3,
-    img: "https://images.unsplash.com/photo-1611073761634-d61d2c5f7d52?auto=format&fit=crop&w=900&q=80",
-    imgAlt: "Sports massage on an athlete's leg for recovery",
+    img: "/images/sports-massage.jpg",
+    imgAlt: "Sports massage on an athlete for recovery",
   },
   {
     num: "04",
@@ -44,8 +44,8 @@ const services = [
     tag: "Prenatal · Side-lying",
     glyph: "P",
     t: 4,
-    img: "https://images.unsplash.com/photo-1556760544-74068565f05c?auto=format&fit=crop&w=900&q=80",
-    imgAlt: "Prenatal pregnancy massage in a side-lying position",
+    img: "/images/pregnancy-massage.jpg",
+    imgAlt: "Prenatal pregnancy massage",
   },
   {
     num: "05",
@@ -94,8 +94,8 @@ const services = [
     tag: "Aromatherapy · Detox",
     glyph: "R",
     t: 9,
-    img: "https://images.unsplash.com/photo-1608501857571-9e7d23a1fa48?auto=format&fit=crop&w=900&q=80",
-    imgAlt: "Essential oils used in raindrop technique aromatherapy",
+    img: "/images/raindrop-detox.jpg",
+    imgAlt: "Raindrop detox aromatherapy technique",
   },
   {
     num: "10",
@@ -104,8 +104,8 @@ const services = [
     tag: "Energy · Combo available",
     glyph: "Ce",
     t: 10,
-    img: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=900&q=80",
-    imgAlt: "Calm energy work with hands lightly placed on the body",
+    img: "/images/consegrity.jpg",
+    imgAlt: "Consegrity energy work session",
   },
   {
     num: "11",
@@ -114,8 +114,8 @@ const services = [
     tag: "Business · Events",
     glyph: "O",
     t: 11,
-    img: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=900&q=80",
-    imgAlt: "On-site chair massage at an office wellness event",
+    img: "/images/onsite-massage.jpg",
+    imgAlt: "On-site chair massage at a business event",
   },
   {
     num: "12",
@@ -124,8 +124,8 @@ const services = [
     tag: "In-home · Bedside",
     glyph: "H",
     t: 12,
-    img: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80",
-    imgAlt: "In-home massage therapy bringing care to the client",
+    img: "/images/inhome-massage.jpg",
+    imgAlt: "In-home and nursing home massage care",
   },
 ];
 
@@ -287,11 +287,11 @@ export default function Services() {
             >
               {/* Image area */}
               <div
-                className={`svc-t-${s.t}`}
                 style={{
                   position: "relative",
                   aspectRatio: "5/3",
                   overflow: "hidden",
+                  background: "oklch(0.26 0.015 60)",
                 }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -305,8 +305,6 @@ export default function Services() {
                     objectFit: "cover",
                     display: "block",
                     transition: "transform 0.6s ease",
-                    mixBlendMode: "overlay",
-                    opacity: 0.5,
                   }}
                   onMouseEnter={(e) => {
                     (e.currentTarget as HTMLImageElement).style.transform =
