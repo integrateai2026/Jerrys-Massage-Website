@@ -107,7 +107,7 @@ export default function Testimonials() {
                 marginBottom: 22,
               }}
             >
-              Word of mouth
+              Client reviews
             </span>
             <h2
               style={{
@@ -116,14 +116,14 @@ export default function Testimonials() {
                 lineHeight: 1.05,
               }}
             >
-              Clients who keep{" "}
+              What Fargo clients{" "}
               <em style={{ fontStyle: "italic", color: "var(--accent)" }}>
-                coming back.
+                are saying.
               </em>
             </h2>
             <p style={{ color: "var(--ink-2)", marginTop: 28, maxWidth: 540 }}>
-              Real feedback from Fargo–Moorhead clients. Booking is easier when
-              you know what to expect.
+              Over 25 years of word-of-mouth in the Fargo–Moorhead area.
+              Real clients, real results.
             </p>
           </div>
           <a

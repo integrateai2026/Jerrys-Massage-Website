@@ -137,7 +137,7 @@ export default function Contact() {
                 marginBottom: 22,
               }}
             >
-              Visit · Call · Text · Email
+              Book · Call · Text · Visit
             </span>
             <h2
               style={{
@@ -146,14 +146,14 @@ export default function Contact() {
                 lineHeight: 1.05,
               }}
             >
-              Where to find{" "}
+              Ready to{" "}
               <em style={{ fontStyle: "italic", color: "var(--accent)" }}>
-                Jerry.
+                book?
               </em>
             </h2>
             <p style={{ color: "var(--ink-2)", marginTop: 28, maxWidth: 540 }}>
-              One quiet studio off 25th Street South. Easy in, easy out — and
-              you&apos;ll know the door by the sign.
+              Studio on 25th Street South in Fargo. Free parking out front.
+              Open Mon–Sat by appointment — same-week slots usually available.
             </p>
           </div>
           <a
@@ -190,7 +190,7 @@ export default function Contact() {
                 marginBottom: 8,
               }}
             >
-              Get in touch
+              Reach us
             </h3>
             <p
               style={{
@@ -199,7 +199,7 @@ export default function Contact() {
                 marginBottom: 28,
               }}
             >
-              Fastest replies are by text. Online booking is open 24/7.
+              Text is fastest. Online booking is open around the clock.
             </p>
 
             {contactItems.map((ci) => (

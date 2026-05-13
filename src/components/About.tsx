@@ -187,11 +187,11 @@ export default function About() {
                 marginTop: 18,
               }}
             >
-              Hands that{" "}
+              Fargo&apos;s most trusted{" "}
               <em style={{ fontStyle: "italic", color: "var(--accent)" }}>
-                know
+                licensed massage therapist
               </em>{" "}
-              the difference between tense and tender.
+              — since 2000.
             </h2>
 
             <p
@@ -202,11 +202,10 @@ export default function About() {
                 lineHeight: 1.5,
               }}
             >
-              Jerry Wendel Daub has been the trusted massage therapist for
-              thousands of clients across Fargo and Moorhead since 2000. Whether
-              you&apos;re chasing relief from chronic pain, recovering from a
-              workout, prepping for a baby, or just need to exhale — you&apos;re
-              in steady, experienced hands.
+              Jerry Wendel Daub has worked with thousands of clients across
+              Fargo and Moorhead for over 25 years. Back pain, sports injuries,
+              pregnancy discomfort, chronic tension — he identifies the root
+              cause and builds every session around your specific needs.
             </p>
 
             <div
@@ -253,7 +252,7 @@ export default function About() {
                 href="https://www.massagebyjerry.com/why"
                 className="btn btn-dark"
               >
-                Read why clients choose Jerry{" "}
+                See why clients keep coming back{" "}
                 <span className="arr">→</span>
               </a>
             </div>

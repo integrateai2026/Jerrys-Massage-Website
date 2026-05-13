@@ -10,7 +10,7 @@ const services = [
   {
     num: "01",
     name: "Swedish Massage",
-    desc: "Long, flowing strokes to calm the nervous system, ease tension, and reset your stress baseline.",
+    desc: "The classic full-body massage for stress relief and relaxation. Long, smooth strokes that ease tension from head to toe.",
     tag: "Relaxation · Stress relief",
     glyph: "S",
     t: 1,
@@ -20,8 +20,8 @@ const services = [
   {
     num: "02",
     name: "Deep Tissue & Trigger Point",
-    desc: "Slower, targeted pressure that releases stubborn knots in the back, neck, shoulders, and hips.",
-    tag: "Chronic pain · Knots",
+    desc: "Firm, focused pressure for chronic back pain, tight shoulders, and knots that won't go away on their own.",
+    tag: "Back pain · Chronic tension",
     glyph: "D",
     t: 2,
     img: "/images/deep-tissue.jpg",
@@ -30,18 +30,18 @@ const services = [
   {
     num: "03",
     name: "Sports Massage",
-    desc: "Pre-event, post-event, or recovery work for athletes — keep moving and bounce back faster.",
+    desc: "Faster recovery, less soreness, better range of motion. Pre-event, post-event, or regular maintenance.",
     tag: "Recovery · Performance",
     glyph: "Sp",
     t: 3,
     img: "/images/sports-massage.jpg",
-    imgAlt: "Sports massage on an athlete for recovery",
+    imgAlt: "Sports massage for athlete recovery",
   },
   {
     num: "04",
     name: "Pregnancy Massage",
-    desc: "Safe, supportive techniques for expecting moms — lower-back relief, swelling, and circulation.",
-    tag: "Prenatal · Side-lying",
+    desc: "Safe, side-lying massage for expecting mothers at any stage. Relieves back pain, hip tension, and swelling.",
+    tag: "Prenatal · All trimesters",
     glyph: "P",
     t: 4,
     img: "/images/pregnancy-massage.jpg",
@@ -50,48 +50,48 @@ const services = [
   {
     num: "05",
     name: "Cupping Therapy",
-    desc: "Gentle suction to lift tight fascia, increase blood flow, and unstick layers of muscle.",
-    tag: "Fascia · Mobility",
+    desc: "Suction therapy that lifts tight fascia, boosts circulation, and releases deep muscle tension.",
+    tag: "Fascia release · Circulation",
     glyph: "C",
     t: 5,
     img: "/images/cupping.jpg",
-    imgAlt: "Cupping therapy – glass cups placed along the back",
+    imgAlt: "Cupping therapy – glass cups on the back",
   },
   {
     num: "06",
     name: "Neuromuscular Therapy",
-    desc: "St. John technique focused on nerve-related pain, postural strain, and old injuries.",
-    tag: "Nerve pain · Posture",
+    desc: "The St. John method for nerve pain, posture problems, and injuries that haven't responded to other treatment.",
+    tag: "Nerve pain · Injury recovery",
     glyph: "N",
     t: 6,
     img: "/images/neuromuscular.jpg",
-    imgAlt: "St. John neuromuscular therapy – therapist working on a client",
+    imgAlt: "St. John neuromuscular therapy session",
   },
   {
     num: "07",
     name: "Fibromyalgia Therapy",
-    desc: "Light, patient work for sensitive bodies — designed to soothe, not provoke, flare-ups.",
-    tag: "Gentle · Chronic",
+    desc: "Gentle, adapted massage for fibromyalgia and chronic pain. Designed to soothe — never aggravate.",
+    tag: "Fibromyalgia · Gentle care",
     glyph: "F",
     t: 7,
     img: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80",
-    imgAlt: "Gentle, calming massage therapy for sensitive clients",
+    imgAlt: "Gentle massage for fibromyalgia clients",
   },
   {
     num: "08",
     name: "Geriatric Massage",
-    desc: "Adapted pressure and positioning for older clients dealing with arthritis, stiffness, or limited mobility.",
+    desc: "Light, careful massage for older adults managing arthritis, joint stiffness, or reduced mobility.",
     tag: "Seniors · Arthritis",
     glyph: "G",
     t: 8,
     img: "/images/geriatric-massage.jpg",
-    imgAlt: "Geriatric massage – gentle therapy for an older client",
+    imgAlt: "Gentle massage for an older client",
   },
   {
     num: "09",
     name: "Raindrop Detox",
-    desc: "Essential-oil layered application along the spine — for clients drawn to a more aromatic, energetic session.",
-    tag: "Aromatherapy · Detox",
+    desc: "Young Living essential oils applied along the spine with feather-light strokes. Aromatic and deeply calming.",
+    tag: "Aromatherapy · Relaxation",
     glyph: "R",
     t: 9,
     img: "/images/raindrop-detox.jpg",
@@ -100,8 +100,8 @@ const services = [
   {
     num: "10",
     name: "Consegrity Energy Work",
-    desc: "Quiet, hands-on energy work that can be paired with massage or booked on its own.",
-    tag: "Energy · Combo available",
+    desc: "Light-touch energy work that supports the body's natural healing. Add it to any session or book it solo.",
+    tag: "Energy work · Add-on",
     glyph: "Ce",
     t: 10,
     img: "/images/consegrity.jpg",
@@ -110,8 +110,8 @@ const services = [
   {
     num: "11",
     name: "On-Site Chair Massage",
-    desc: "Bring Jerry to your office, event, or wellness day. Great for staff appreciation and corporate wellness.",
-    tag: "Business · Events",
+    desc: "Jerry comes to you. Perfect for office wellness days, corporate events, and employee appreciation.",
+    tag: "Corporate wellness · Events",
     glyph: "O",
     t: 11,
     img: "/images/onsite-massage.jpg",
@@ -120,8 +120,8 @@ const services = [
   {
     num: "12",
     name: "In-Home, Hospital & Nursing",
-    desc: "Massage that meets clients where they are — including bedside care for hospital and nursing-home stays.",
-    tag: "In-home · Bedside",
+    desc: "Jerry travels to your home, hospital room, or care facility — professional and compassionate care, wherever you are.",
+    tag: "In-home · Bedside care",
     glyph: "H",
     t: 12,
     img: "/images/inhome-massage.jpg",
@@ -133,19 +133,19 @@ const pricing = [
   {
     dur: "30 minutes",
     amt: "$45",
-    note: "Targeted focus session — great for a single trouble spot or your first visit.",
+    note: "Best for a single problem area or your first visit with Jerry.",
     feat: false,
   },
   {
     dur: "60 minutes · Most booked",
     amt: "$80",
-    note: "Full-body session with room for focused work where you need it most.",
+    note: "Full-body session with dedicated time for your biggest problem areas.",
     feat: true,
   },
   {
     dur: "90 minutes",
     amt: "$110",
-    note: "Deep, unhurried work — pair modalities or add cupping with time to spare.",
+    note: "Unhurried work across multiple areas — ideal for chronic pain or combined modalities.",
     feat: false,
   },
 ];
@@ -233,11 +233,11 @@ export default function Services() {
                 color: "var(--bg)",
               }}
             >
-              A full menu of{" "}
+              Every type of massage{" "}
               <em style={{ fontStyle: "italic", color: "oklch(0.78 0.10 60)" }}>
-                therapeutic massage
+                you need
               </em>{" "}
-              in Fargo.
+              — in one place.
             </h2>
             <p
               style={{
@@ -246,8 +246,8 @@ export default function Services() {
                 maxWidth: 540,
               }}
             >
-              Every session is shaped around what your body is asking for that
-              day — from a slow Swedish wind-down to focused trigger-point work.
+              Swedish, deep tissue, sports, pregnancy, cupping, and more.
+              Every session is customized — no two are the same.
             </p>
           </div>
         </div>
@@ -441,7 +441,7 @@ export default function Services() {
               marginBottom: 14,
             }}
           >
-            Transparent pricing
+            Simple pricing
           </span>
           <h3
             style={{
@@ -451,7 +451,7 @@ export default function Services() {
               lineHeight: 1.1,
             }}
           >
-            Same rate for every modality. No surprise upcharges.
+            One flat rate. Every service. No surprises.
           </h3>
 
           <div

@@ -9,22 +9,22 @@ gsap.registerPlugin(ScrollTrigger);
 const deals = [
   {
     eyebrow: "Gift cards",
-    title: "A gift that actually gets used.",
-    desc: "Digital gift cards sent instantly — or scheduled for a birthday, anniversary, or any excuse to treat someone well. Recipients choose the modality and duration.",
-    cta: { label: "Send a gift card", href: "https://squareup.com/gift/CRRFQ011Q5V88/order" },
+    title: "The gift they'll actually use.",
+    desc: "Send a gift card instantly by email — or schedule it for a birthday or anniversary. The recipient books their own appointment at whatever service and length works for them.",
+    cta: { label: "Buy a gift card", href: "https://squareup.com/gift/CRRFQ011Q5V88/order" },
     accent: true,
   },
   {
     eyebrow: "Refer a friend",
-    title: "Share Jerry. Save on your next visit.",
-    desc: "Send a friend to Jerry for the first time and they get ½ off their first massage. You get ½ off your next session as a thank-you.",
+    title: "Refer a friend. Both of you save.",
+    desc: "Bring someone new to Jerry and they get 50% off their first session. You get 50% off your next one. No limits on how many friends you refer.",
     cta: { label: "Book online", href: "https://www.massagebyjerry.com/bookonline" },
     accent: false,
   },
   {
-    eyebrow: "7-massage package",
-    title: "Save $25 on a bundle.",
-    desc: "Buy seven sessions up front and save $25. Use them however you like — mix modalities, spread them out, or double up during a tough stretch.",
+    eyebrow: "7-session package",
+    title: "Commit to feeling better. Save $25.",
+    desc: "Prepay for 7 sessions and save $25 total. Use them on your own schedule — any service, any length, mix and match as needed.",
     cta: { label: "Book to redeem", href: "https://www.massagebyjerry.com/bookonline" },
     accent: false,
   },
@@ -89,9 +89,9 @@ export default function Specials() {
               lineHeight: 1.05,
             }}
           >
-            More ways to{" "}
+            Save more.{" "}
             <em style={{ fontStyle: "italic", color: "var(--accent)" }}>
-              save.
+              Feel better.
             </em>
           </h2>
         </div>

@@ -9,8 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 const steps = [
   {
     n: "1",
-    title: "Reach out",
-    desc: "Book online in under a minute, or text Mikky to find a time that works. No phone tag, no forms.",
+    title: "Pick your time",
+    desc: "Book online 24/7 or text Mikky — no waiting on hold, no back-and-forth. Same-week spots are usually open.",
     actions: [
       { href: "https://www.massagebyjerry.com/bookonline", label: "Book online" },
       { href: "sms:7019690150", label: "Text 701-969-0150" },
@@ -18,18 +18,18 @@ const steps = [
   },
   {
     n: "2",
-    title: "Tell Jerry what's going on",
-    desc: "A quick conversation when you arrive — what hurts, what's tight, what you're hoping to leave behind.",
+    title: "Tell Jerry what's bothering you",
+    desc: "When you arrive, give Jerry a quick rundown — what hurts, how long, what you've tried. He builds the session around you.",
     actions: [
       { href: "mailto:massagebyjerry2@gmail.com", label: "Email Jerry first" },
     ],
   },
   {
     n: "3",
-    title: "Feel better. Come back.",
-    desc: "Many clients rebook on the way out. Ask about the 7-massage package for the best ongoing value.",
+    title: "Walk out feeling better",
+    desc: "Most clients rebook before they leave. Ask about the 7-session bundle to save $25 and lock in your schedule.",
     actions: [
-      { href: "#gift", label: "See packages & offers" },
+      { href: "#gift", label: "See the bundle deal" },
     ],
   },
 ];
@@ -118,15 +118,13 @@ export default function HowItWorks() {
                 lineHeight: 1.05,
               }}
             >
-              Booking should be the{" "}
+              Book in{" "}
               <em style={{ fontStyle: "italic", color: "var(--accent)" }}>
-                easiest
-              </em>{" "}
-              part.
+                under a minute.
+              </em>
             </h2>
             <p style={{ color: "var(--ink-2)", marginTop: 28, maxWidth: 540 }}>
-              Three ways to get on the schedule — pick whatever feels easiest.
-              Same-week openings are common.
+              Same-week appointments are almost always available. Pick what works for you.
             </p>
           </div>
         </div>

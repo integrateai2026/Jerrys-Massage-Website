@@ -8,37 +8,37 @@ gsap.registerPlugin(ScrollTrigger);
 
 const faqs = [
   {
-    q: "How do I book my first massage in Fargo?",
-    a: "Book online in about a minute, or text Mikky at 701-969-0150. New clients are welcome — Jerry will ask a few quick questions when you arrive so the session is built around what you actually need.",
+    q: "How do I book a massage in Fargo?",
+    a: "Book online anytime at massagebyjerry.com, or text Mikky at 701-969-0150. New clients are always welcome — Jerry will spend a couple minutes with you when you arrive to make sure the session addresses exactly what you came in for.",
     open: true,
   },
   {
-    q: "What's the difference between Swedish and deep tissue?",
-    a: "Swedish is long, gliding strokes meant to relax. Deep tissue uses slower, more focused pressure to reach stubborn muscle layers. Most sessions blend both — Jerry adjusts in real time.",
+    q: "What's the difference between Swedish and deep tissue massage?",
+    a: "Swedish uses long, smooth strokes designed to relax — great for stress relief or a first visit. Deep tissue uses slower, firmer pressure to reach deeper muscle layers and break up chronic tension. Most sessions blend both, and Jerry adjusts pressure throughout.",
   },
   {
-    q: "Do you take insurance or HSA/FSA?",
-    a: "Jerry doesn't bill insurance directly, but receipts can be provided for HSA/FSA reimbursement. Check with your plan administrator first.",
+    q: "Do you accept insurance or HSA/FSA cards?",
+    a: "Insurance isn't billed directly, but Jerry can provide a receipt for HSA or FSA reimbursement. Most health savings accounts cover licensed massage therapy — check with your plan administrator.",
   },
   {
-    q: "What should I wear, and do I need to undress?",
-    a: "Undress to your level of comfort — you'll be fully draped throughout the session and only the area being worked on is uncovered. Wear what you like; comfort always comes first.",
+    q: "Do I need to fully undress?",
+    a: "Only to your comfort level. You'll be fully draped with a sheet the entire session — only the area being worked on is ever uncovered. Most clients undress fully, but you're always in control.",
   },
   {
-    q: "Is pregnancy massage safe in every trimester?",
-    a: "Yes. Jerry uses side-lying positioning and pregnancy-safe techniques. Many clients book throughout the second and third trimesters for lower-back, hip, and swelling relief.",
+    q: "Is pregnancy massage safe?",
+    a: "Yes. Jerry uses safe, side-lying positioning and pregnancy-appropriate techniques. Many clients book through all three trimesters for back pain, hip discomfort, leg cramps, and swelling.",
   },
   {
-    q: "How early should I arrive?",
-    a: "Five minutes is plenty for a returning client. New clients, give yourself ten so there's time for a quick chat before the session starts. Parking is easy and right on site.",
+    q: "How early should I arrive for my appointment?",
+    a: "Five minutes works for returning clients. New clients should arrive 10 minutes early for a quick intake conversation. Parking is free and right out front.",
   },
   {
-    q: "What's your cancellation policy?",
-    a: "Life happens — just give at least 24 hours' notice when you can. The schedule fills up, so an early heads-up lets someone else get in.",
+    q: "What is your cancellation policy?",
+    a: "Please give 24 hours' notice when possible. The schedule fills quickly, and early notice lets another client take the spot.",
   },
   {
     q: "Can Jerry come to my office or event?",
-    a: "Yes. On-site chair massage is available for offices, wellness days, and events around Fargo–Moorhead. Email Jerry to put a date on the calendar.",
+    a: "Yes — on-site chair massage is available for corporate offices, employee wellness days, and events throughout the Fargo–Moorhead area. Email Jerry to check availability and get a quote.",
   },
 ];
 
@@ -216,9 +216,9 @@ export default function FAQ() {
                 marginTop: 14,
               }}
             >
-              Questions,{" "}
+              Common{" "}
               <em style={{ fontStyle: "italic", color: "var(--accent)" }}>
-                answered.
+                questions.
               </em>
             </h2>
             <p

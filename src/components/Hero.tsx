@@ -189,9 +189,10 @@ export default function Hero() {
                 marginTop: 28,
               }}
             >
-              Team up with Jerry to relieve pain, recover faster, and feel your
-              best. Deep tissue, Swedish, sports, pregnancy, neuromuscular &amp;
-              cupping therapy — tailored to what your body actually needs.
+              Jerry has helped thousands of Fargo–Moorhead clients get out of
+              pain and stay that way. Deep tissue, Swedish, sports, pregnancy,
+              cupping, and more — every session built around what your body
+              needs that day.
             </p>
 
             <div
@@ -243,14 +244,14 @@ export default function Hero() {
                 marginBottom: 22,
                 color: "var(--ink)",
               }}>
-                Same-week openings
+                Book this week
               </h3>
 
               {/* Pricing rows */}
               {[
-                { label: "30 minute focus session", price: "$45" },
-                { label: "60 minute most-booked",   price: "$80" },
-                { label: "90 minute extended",       price: "$110" },
+                { label: "30 min — focus session",  price: "$45" },
+                { label: "60 min — full body",       price: "$80" },
+                { label: "90 min — deep work",       price: "$110" },
               ].map((row, i) => (
                 <div key={i} style={{
                   display: "flex",

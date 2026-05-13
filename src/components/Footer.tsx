@@ -86,8 +86,8 @@ export default function Footer() {
                 fontSize: 15,
               }}
             >
-              Book online any time, or text Mikky to find a slot this week.
-              Same hands, same room, for 25+ years.
+              Book online anytime or text Mikky to find a spot this week.
+              Same therapist, same room — for 25+ years.
             </p>
             <div
               style={{
