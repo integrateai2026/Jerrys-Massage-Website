@@ -133,7 +133,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop links */}
-          <div className="nav-desktop-links" style={{ display: "flex", alignItems: "center", gap: 4 }}>
+          <div className="nav-desktop-links">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -164,15 +164,7 @@ export default function Navbar() {
             <a
               href="tel:7019690150"
               className="nav-cta-btn btn btn-ghost nav-call-btn"
-              style={
-                {
-                  "--bg": "transparent",
-                  "--ink": "var(--ink)",
-                  "--line": "var(--line)",
-                  padding: "10px 18px",
-                  fontSize: 14,
-                } as React.CSSProperties
-              }
+              style={{ padding: "10px 18px", fontSize: 14 }}
             >
               ✆ Call
             </a>
@@ -225,19 +217,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-
-      {/* Mobile menu */}
-      <style>{`
-        @media (min-width: 1180px) {
-          .nav-burger-btn { display: none !important; }
-        }
-        @media (max-width: 1179px) {
-          .nav-desktop-links { display: none !important; }
-        }
-        @media (max-width: 540px) {
-          .nav-call-btn { display: none !important; }
-        }
-      `}</style>
 
       {menuOpen && (
         <div
