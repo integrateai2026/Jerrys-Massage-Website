@@ -322,7 +322,6 @@ export default function Footer() {
             © 2026 Massage Therapy by Jerry Wendel Daub · Licensed Massage
             Therapist in Fargo, ND
           </span>
-          <span>Site designed for clarity, speed, and easy booking.</span>
         </div>
       </div>
 
