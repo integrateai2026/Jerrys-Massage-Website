@@ -206,7 +206,12 @@ export default function Hero() {
               </a>
               <a
                 href="#services"
-                className="btn btn-ghost"
+                className="btn"
+                style={{
+                  background: "var(--accent)",
+                  color: "var(--accent-ink)",
+                  border: "1px solid var(--accent)",
+                }}
               >
                 View services <span className="arr">→</span>
               </a>
@@ -223,19 +228,19 @@ export default function Hero() {
               style={{
                 background: "var(--bg-2)",
                 border: "1px solid var(--line)",
-                borderRadius: 22,
-                padding: "28px 28px 24px",
+                borderRadius: 18,
+                padding: "18px 20px 16px",
               }}
             >
               {/* Eyebrow */}
               <span style={{
                 fontFamily: "ui-monospace, 'SF Mono', Menlo, monospace",
-                fontSize: 11,
+                fontSize: 10,
                 letterSpacing: "0.16em",
                 textTransform: "uppercase",
                 color: "var(--ink-3)",
                 display: "block",
-                marginBottom: 14,
+                marginBottom: 8,
               }}>
                 Quick Book
               </span>
@@ -243,10 +248,10 @@ export default function Hero() {
               {/* Heading */}
               <h3 style={{
                 fontFamily: "var(--font-instrument-serif)",
-                fontSize: "clamp(22px, 2.4vw, 30px)",
+                fontSize: "clamp(18px, 2vw, 24px)",
                 fontWeight: 400,
                 lineHeight: 1.1,
-                marginBottom: 22,
+                marginBottom: 12,
                 color: "var(--ink)",
               }}>
                 Book this week
@@ -262,15 +267,15 @@ export default function Hero() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  padding: "14px 0",
+                  padding: "9px 0",
                   borderTop: "1px solid var(--line)",
                 }}>
-                  <span style={{ fontSize: 15, color: "var(--ink-2)" }}>
+                  <span style={{ fontSize: 13, color: "var(--ink-2)" }}>
                     {row.label}
                   </span>
                   <span style={{
                     fontFamily: "var(--font-instrument-serif)",
-                    fontSize: 20,
+                    fontSize: 17,
                     color: "var(--accent)",
                     fontWeight: 400,
                   }}>
@@ -287,8 +292,8 @@ export default function Hero() {
                   alignItems: "center",
                   justifyContent: "center",
                   width: "100%",
-                  marginTop: 20,
-                  padding: "16px 24px",
+                  marginTop: 12,
+                  padding: "12px 24px",
                   borderRadius: 999,
                   background: "var(--ink)",
                   color: "var(--bg)",
@@ -312,7 +317,7 @@ export default function Hero() {
             </div>
 
           {/* Arch image */}
-          <div className="hero-art-wrap relative" style={{ aspectRatio: "4/3", borderRadius: "280px 280px 24px 24px", overflow: "hidden", background: "var(--bg-3)", width: "100%" }}>
+          <div className="hero-art-wrap relative" style={{ aspectRatio: "4/3", borderRadius: "280px 280px 24px 24px", overflow: "hidden", background: "var(--bg-3)", width: "100%", marginTop: -16 }}>
             <div
               className="hero-art-inner absolute inset-0 scale-110"
               style={{ transformOrigin: "center center" }}
