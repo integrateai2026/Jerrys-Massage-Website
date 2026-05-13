@@ -204,12 +204,6 @@ export default function Hero() {
               style={{ marginTop: 32 }}
             >
               <a
-                href="https://www.massagebyjerry.com/bookonline"
-                className="hero-cta btn btn-primary"
-              >
-                Book a massage <span className="arr">→</span>
-              </a>
-              <a
                 href="tel:7019690150"
                 className="hero-cta btn btn-ghost"
               >

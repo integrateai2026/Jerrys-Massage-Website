@@ -250,12 +250,6 @@ export default function Services() {
               day — from a slow Swedish wind-down to focused trigger-point work.
             </p>
           </div>
-          <a
-            href="https://www.massagebyjerry.com/bookonline"
-            className="btn btn-primary"
-          >
-            Book now <span className="arr">→</span>
-          </a>
         </div>
 
         {/* Services grid */}
@@ -387,17 +381,50 @@ export default function Services() {
                 >
                   {s.desc}
                 </p>
-                <span
-                  style={{
-                    fontSize: 11,
-                    textTransform: "uppercase",
-                    letterSpacing: "0.12em",
-                    color: "oklch(0.78 0.10 60)",
-                    marginTop: 4,
-                  }}
-                >
-                  {s.tag}
-                </span>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 8 }}>
+                  <span
+                    style={{
+                      fontSize: 11,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.12em",
+                      color: "oklch(0.78 0.10 60)",
+                    }}
+                  >
+                    {s.tag}
+                  </span>
+                  <a
+                    href="https://www.massagebyjerry.com/bookonline"
+                    style={{
+                      fontSize: 12,
+                      fontWeight: 500,
+                      letterSpacing: "0.04em",
+                      color: "oklch(0.86 0.018 70)",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 5,
+                      padding: "6px 14px",
+                      borderRadius: 999,
+                      border: "1px solid oklch(0.38 0.015 60)",
+                      transition: "all 0.18s ease",
+                      textDecoration: "none",
+                      whiteSpace: "nowrap",
+                    }}
+                    onMouseEnter={e => {
+                      const el = e.currentTarget as HTMLElement;
+                      el.style.background = "oklch(0.32 0.015 60)";
+                      el.style.borderColor = "oklch(0.50 0.015 60)";
+                      el.style.color = "#fff";
+                    }}
+                    onMouseLeave={e => {
+                      const el = e.currentTarget as HTMLElement;
+                      el.style.background = "transparent";
+                      el.style.borderColor = "oklch(0.38 0.015 60)";
+                      el.style.color = "oklch(0.86 0.018 70)";
+                    }}
+                  >
+                    Book <span style={{ transition: "transform 0.18s ease", display: "inline-block" }}>→</span>
+                  </a>
+                </div>
               </div>
             </div>
           ))}
