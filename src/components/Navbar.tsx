@@ -10,29 +10,30 @@ export default function Navbar() {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // NOTE: Never animate opacity on nav elements — they must always be visible.
+    // Only animate position (x/y) so elements are visible even if GSAP fails.
     const ctx = gsap.context(() => {
       gsap.from(".nav-logo", {
-        opacity: 0,
-        x: -20,
-        duration: 0.8,
+        x: -16,
+        duration: 0.7,
         ease: "power3.out",
-        delay: 0.2,
+        delay: 0.1,
       });
       gsap.from(".nav-link", {
-        opacity: 0,
-        y: -10,
-        duration: 0.6,
-        stagger: 0.07,
+        y: -8,
+        duration: 0.5,
+        stagger: 0.06,
         ease: "power3.out",
-        delay: 0.4,
+        delay: 0.2,
+        clearProps: "transform",
       });
       gsap.from(".nav-cta-btn", {
-        opacity: 0,
-        x: 20,
-        duration: 0.8,
-        stagger: 0.1,
+        x: 16,
+        duration: 0.6,
+        stagger: 0.08,
         ease: "power3.out",
-        delay: 0.5,
+        delay: 0.25,
+        clearProps: "transform",
       });
     }, navRef);
 

@@ -11,27 +11,15 @@ export default function GSAPInit() {
     ScrollTrigger.defaults({ markers: false });
     gsap.ticker.lagSmoothing(0);
 
-    // Page-load curtain reveal
-    gsap.from("body", {
-      opacity: 0,
-      duration: 0.5,
-      ease: "power2.out",
-      clearProps: "opacity",
-    });
+    // Global default: always clear inline opacity + transform after every tween
+    // completes so elements can never be permanently stuck invisible.
+    gsap.defaults({ clearProps: "opacity,transform,x,y,scale" });
 
-    // Subtle parallax on section eyebrows
-    document.querySelectorAll(".eyebrow-parallax").forEach((el) => {
-      gsap.to(el, {
-        y: -20,
-        ease: "none",
-        scrollTrigger: {
-          trigger: el,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1,
-        },
-      });
-    });
+    // Page-load curtain reveal
+    gsap.fromTo("body",
+      { opacity: 0 },
+      { opacity: 1, duration: 0.4, ease: "power2.out", clearProps: "opacity" }
+    );
 
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());
