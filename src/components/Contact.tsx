@@ -282,87 +282,34 @@ export default function Contact() {
 
           {/* Map + directions */}
           <div className="map-card">
+            {/* Responsive iframe wrapper — padding-bottom drives height */}
             <div
-              className="map-bg"
               style={{
-                aspectRatio: "5/4",
+                position: "relative",
+                paddingBottom: "80%",
+                height: 0,
                 borderRadius: 22,
                 overflow: "hidden",
                 border: "1px solid var(--line)",
-                position: "relative",
               }}
               aria-label="Map showing 1326 25th Street S, Fargo, ND"
             >
-              {/* Pin */}
-              <div
-                className="map-pin"
+              <iframe
+                src="https://maps.google.com/maps?q=1326+25th+St+S,+Fargo,+ND+58103&hl=en&z=15&output=embed"
                 style={{
                   position: "absolute",
-                  left: "50%",
-                  top: "50%",
-                  transform: "translate(-50%, -100%)",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  gap: 6,
-                  zIndex: 2,
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: 0,
+                  display: "block",
                 }}
-              >
-                <div
-                  style={{
-                    width: 22,
-                    height: 22,
-                    borderRadius: "50% 50% 50% 0",
-                    background: "var(--accent)",
-                    transform: "rotate(-45deg)",
-                    boxShadow:
-                      "0 8px 16px -6px color-mix(in oklab, var(--accent) 60%, transparent)",
-                  }}
-                />
-                <div
-                  style={{
-                    transform: "translateY(8px)",
-                    background: "var(--bg)",
-                    border: "1px solid var(--line)",
-                    padding: "8px 14px",
-                    borderRadius: 999,
-                    fontSize: 12,
-                    whiteSpace: "nowrap",
-                    fontWeight: 500,
-                  }}
-                >
-                  1326 25th St S · Fargo
-                </div>
-              </div>
-
-              {/* Legend */}
-              <div
-                style={{
-                  position: "absolute",
-                  left: 20,
-                  bottom: 20,
-                  background: "var(--bg)",
-                  border: "1px solid var(--line)",
-                  padding: "12px 16px",
-                  borderRadius: 14,
-                  fontSize: 13,
-                  maxWidth: 240,
-                }}
-              >
-                <strong
-                  style={{
-                    fontFamily: "var(--font-instrument-serif)",
-                    fontSize: 18,
-                    fontWeight: 400,
-                    display: "block",
-                    marginBottom: 4,
-                  }}
-                >
-                  Massage by Jerry
-                </strong>
-                Quiet, private studio off 25th St S. Free parking right outside
-                the door.
-              </div>
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Massage by Jerry — 1326 25th St S, Fargo, ND"
+              />
             </div>
 
             <a

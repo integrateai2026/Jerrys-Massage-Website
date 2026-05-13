@@ -55,7 +55,7 @@ export default function Marquee() {
 
     const tween = gsap.to(track, {
       x: -totalWidth,
-      duration: 32,
+      duration: 65,
       ease: "none",
       repeat: -1,       // infinite
       modifiers: {
