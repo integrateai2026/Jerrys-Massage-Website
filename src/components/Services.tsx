@@ -258,9 +258,7 @@ export default function Services() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
-            gap: 0,
-            borderTop: "1px solid oklch(0.32 0.015 60)",
-            borderLeft: "1px solid oklch(0.32 0.015 60)",
+            gap: 16,
           }}
         >
           {services.map((s) => (
@@ -268,8 +266,8 @@ export default function Services() {
               key={s.num}
               className="svc-card"
               style={{
-                borderRight: "1px solid oklch(0.32 0.015 60)",
-                borderBottom: "1px solid oklch(0.32 0.015 60)",
+                border: "1px solid oklch(0.32 0.015 60)",
+                borderRadius: 16,
                 display: "flex",
                 flexDirection: "column",
                 transition: "background 0.2s ease",
