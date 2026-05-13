@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -125,12 +125,7 @@ export default function Hero() {
     return () => ctx.revert();
   }, []);
 
-  const stats = [
-    { value: "25+", label: "Years in practice" },
-    { value: "1,100", label: "Hrs trained · PIMT 2000" },
-    { value: "LMT", label: "Licensed in N. Dakota" },
-    { value: "NCBTMB", label: "Nationally certified" },
-  ];
+
 
   return (
     <header
@@ -211,38 +206,6 @@ export default function Hero() {
               </a>
             </div>
 
-            <div
-              className="flex flex-wrap gap-7"
-              style={{
-                marginTop: 48,
-                paddingTop: 28,
-                borderTop: "1px solid var(--line)",
-              }}
-            >
-              {stats.map((s) => (
-                <div key={s.label} className="hero-stat flex flex-col gap-1">
-                  <strong
-                    style={{
-                      fontFamily: "var(--font-instrument-serif)",
-                      fontSize: 30,
-                      fontWeight: 400,
-                    }}
-                  >
-                    {s.value}
-                  </strong>
-                  <span
-                    style={{
-                      fontSize: 12,
-                      textTransform: "uppercase",
-                      letterSpacing: "0.12em",
-                      color: "var(--ink-3)",
-                    }}
-                  >
-                    {s.label}
-                  </span>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Right column — quick book card + arch image */}
@@ -302,7 +265,7 @@ export default function Hero() {
                   <span style={{
                     fontFamily: "var(--font-instrument-serif)",
                     fontSize: 20,
-                    color: "var(--accent-2)",
+                    color: "var(--accent)",
                     fontWeight: 400,
                   }}>
                     {row.price}
