@@ -14,7 +14,7 @@ const services = [
     tag: "Relaxation · Stress relief",
     glyph: "S",
     t: 1,
-    img: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=900&q=80",
+    img: "/images/swedish-massage.jpg",
     imgAlt: "Swedish massage – long flowing strokes on the back",
   },
   {
@@ -54,8 +54,8 @@ const services = [
     tag: "Fascia · Mobility",
     glyph: "C",
     t: 5,
-    img: "https://images.unsplash.com/photo-1612871689353-cccf581d667b?auto=format&fit=crop&w=900&q=80",
-    imgAlt: "Cupping therapy cups placed along the back",
+    img: "/images/cupping.jpg",
+    imgAlt: "Cupping therapy – glass cups placed along the back",
   },
   {
     num: "06",
@@ -64,8 +64,8 @@ const services = [
     tag: "Nerve pain · Posture",
     glyph: "N",
     t: 6,
-    img: "https://images.unsplash.com/photo-1591343395082-e120087004b4?auto=format&fit=crop&w=900&q=80",
-    imgAlt: "Neuromuscular therapy on the neck and shoulder",
+    img: "/images/neuromuscular.jpg",
+    imgAlt: "St. John neuromuscular therapy – therapist working on a client",
   },
   {
     num: "07",
@@ -84,8 +84,8 @@ const services = [
     tag: "Seniors · Arthritis",
     glyph: "G",
     t: 8,
-    img: "https://images.unsplash.com/photo-1573811581456-a1d6c61f6f86?auto=format&fit=crop&w=900&q=80",
-    imgAlt: "Gentle hand massage for an older client",
+    img: "/images/geriatric-massage.jpg",
+    imgAlt: "Geriatric massage – gentle therapy for an older client",
   },
   {
     num: "09",
