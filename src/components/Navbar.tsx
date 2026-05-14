@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
   const navRef = useRef<HTMLElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
@@ -40,9 +41,24 @@ export default function Navbar() {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll, { passive: true });
 
+    // Scroll spy via IntersectionObserver
+    const sectionIds = ["services", "why", "reviews", "gift", "faq", "contact"];
+    const observers: IntersectionObserver[] = [];
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActiveSection(id); },
+        { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+
     return () => {
       ctx.revert();
       window.removeEventListener("scroll", handleScroll);
+      observers.forEach((o) => o.disconnect());
     };
   }, []);
 
@@ -136,29 +152,36 @@ export default function Navbar() {
 
           {/* Desktop links */}
           <div className="nav-desktop-links">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="nav-link rounded-full px-3 py-2 text-sm transition-all duration-150 hover:opacity-100"
-                style={{
-                  color: "var(--ink-2)",
-                  fontSize: 14,
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.background =
-                    "var(--bg-2)";
-                  (e.currentTarget as HTMLElement).style.color = "var(--ink)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.background =
-                    "transparent";
-                  (e.currentTarget as HTMLElement).style.color = "var(--ink-2)";
-                }}
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const id = link.href.replace("#", "");
+              const isActive = activeSection === id;
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="nav-link rounded-full px-3 py-2 text-sm transition-all duration-150"
+                  style={{
+                    color: isActive ? "var(--accent)" : "var(--ink-2)",
+                    background: isActive ? "color-mix(in oklab, var(--accent) 10%, transparent)" : "transparent",
+                    fontWeight: isActive ? 500 : 400,
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isActive) {
+                      (e.currentTarget as HTMLElement).style.background = "var(--bg-2)";
+                      (e.currentTarget as HTMLElement).style.color = "var(--ink)";
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isActive) {
+                      (e.currentTarget as HTMLElement).style.background = "transparent";
+                      (e.currentTarget as HTMLElement).style.color = "var(--ink-2)";
+                    }
+                  }}
+                >
+                  {link.label}
+                </a>
+              );
+            })}
           </div>
 
           {/* CTA buttons */}
